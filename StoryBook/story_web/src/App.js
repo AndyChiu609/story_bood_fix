@@ -1,9 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
-import AddBook from './components/AddBook';
-import ReadBook from './components/ReadBook';
-import './App.css';
+import React from "react";
+
+// React Router 元件
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+// 功能性元件
+import Home from "./components/Home";
+import AddBook from "./components/AddBook";
+import ReadBook from "./components/ReadBook";
+
+// 樣式
+import "./App.css";
 
 function App() {
   return (
