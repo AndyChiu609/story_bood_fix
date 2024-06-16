@@ -57,8 +57,7 @@ const AddBook = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      flexDirection="column"
-    >
+      flexDirection="column">
       <Typography variant="h4" color="white" gutterBottom mt={4}>
         新增繪本
       </Typography>
@@ -85,8 +84,7 @@ const AddBook = () => {
             margin: "20px",
             width: 600,
             height: 200,
-          }}
-        >
+          }}>
           <input {...getInputProps()} />
           {isDragActive ? (
             <Typography color="grey">拖放文件到這裡...</Typography>
@@ -113,8 +111,7 @@ const AddBook = () => {
           variant="contained"
           onClick={saveBook}
           className="save-button"
-          sx={{ mr: 2 }}
-        >
+          sx={{ mr: 2 }}>
           儲存
         </Button>
         <Link href="/">
