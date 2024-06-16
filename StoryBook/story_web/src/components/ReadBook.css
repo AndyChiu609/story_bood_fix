@@ -1,0 +1,73 @@
+.read-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .flip-book {
+    width: 600px;
+    height: 600px;
+  }
+  
+  .page {
+    position: relative;
+  }
+  
+  .page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .page-number {
+    margin-top: 10px; /* 確保文字在圖片下方顯示 */
+    color: white;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .page-number.left {
+    left: 10px;
+  }
+  
+  .page-number.right {
+    right: 10px;
+  }
+  
+  .comments-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+  
+  .comment {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .comment strong {
+    margin-right: 0.5rem;
+  }
+  
+  .back-button {
+    margin-top: 2rem;
+  }
+  
+  .comment-form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
