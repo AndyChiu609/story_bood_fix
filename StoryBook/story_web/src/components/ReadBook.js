@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import HTMLFlipBook from "react-pageflip";
 import { Box, Typography, TextField, Button, Link } from "@mui/material";
-import './ReadBook.css'; // 匯入 CSS 檔案
+import "./ReadBook.css"; // 匯入 CSS 檔案
 
 const ReadBook = () => {
   const { title } = useParams();
@@ -60,13 +60,7 @@ const ReadBook = () => {
 
   return (
     <>
-      <Box
-        className="read-book"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
-      >
+      <Box className="read-book">
         <Typography variant="h4" color="white" margin={4}>
           {book.title}
         </Typography>
@@ -78,23 +72,11 @@ const ReadBook = () => {
                 alt={`page ${index + 1}`}
                 className="page-image"
               />
-              <div
-                className={`page-number ${index % 2 === 0 ? "left" : "right"}`}
-              >
-                第 {index + 1} 頁
-              </div>
             </div>
           ))}
         </HTMLFlipBook>
       </Box>
-      <Box
-        className="comments-section"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
-        mb={5}
-      >
+      <Box className="comments-section">
         <Box className="comments" mb={2}>
           {comments.map((comment, index) => (
             <Box
@@ -105,8 +87,7 @@ const ReadBook = () => {
               className="comment"
               sx={{ minWidth: 600 }}
               display="flex"
-              align-items="flex-start"
-            >
+              align-items="flex-start">
               <strong>{comment.commenter}:</strong>
               <Typography mr={2}>{comment.comment}</Typography>
               <Typography>
@@ -115,9 +96,7 @@ const ReadBook = () => {
             </Box>
           ))}
         </Box>
-        <Box
-          className="comment-form"
-        >
+        <Box className="comment-form">
           <TextField
             variant="filled"
             type="text"
@@ -136,8 +115,7 @@ const ReadBook = () => {
           <Button
             variant="contained"
             onClick={handleAddComment}
-            sx={{ minWidth: 500 }}
-          >
+            sx={{ minWidth: 500 }}>
             送出留言
           </Button>
         </Box>
