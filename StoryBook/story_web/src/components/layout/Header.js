@@ -12,10 +12,10 @@ const Header = () => {
   return (
     <header className="header">
       <img
-        src="../public/favicon.ico"
+        src="https://i.imgur.com/iT78As3.png"
         alt="Logo"
         onClick={handleLogoClick}
-        style={{ cursor: "pointer" }}
+        className="site-logo"
       />
     </header>
   );
