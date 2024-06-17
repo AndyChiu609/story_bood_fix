@@ -10,6 +10,8 @@ import {
   Link,
 } from "@mui/material";
 
+import "./Home.css";
+
 const Home = () => {
   const [books, setBooks] = useState([]);
 
@@ -41,47 +43,39 @@ const Home = () => {
   };
 
   return (
-    <Box
-      className="home"
-      display="flex"
-      alignItems="center"
-      flexDirection="column"
-    >
-      <Typography variant="h4" color="white" gutterBottom margin={4}>
+    <Box display="flex" alignItems="center" flexDirection="column">
+      <Typography variant="h1" color="white" className="title">
         繪本列表
       </Typography>
       <Box
-        className="books"
         mb={3}
         display="flex"
         justify-content="center"
         flex-wrap="wrap"
-      >
+        className="cards-wrapper">
         {books.map((book) => (
           <Card key={book.title} className="book-card">
             <Link
               href={`/read-book/${book.title}`}
               underline="none"
-              color="black"
-            >
+              color="black">
               {book.images[0].src ? (
                 <CardMedia
                   component="img"
                   image={`http://localhost:5000${book.images[0].src}`}
-                  alt={book.title}
-                ></CardMedia>
+                  alt={book.title}></CardMedia>
               ) : (
                 <div className="placeholder-image">No Image Available</div>
               )}
-              <Typography variant="h5">{book.title}</Typography>
+              <Typography variant="h2" className="book-title">
+                {book.title}
+              </Typography>
             </Link>
             <CardContent>
               <Button
                 variant="contained"
                 onClick={() => handleDeleteBook(book.title)}
-                className="delete-button"
-                color="error"
-              >
+                color="error">
                 刪除
               </Button>
             </CardContent>
